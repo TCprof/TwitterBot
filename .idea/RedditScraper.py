@@ -4,10 +4,6 @@ import requests
 import urllib
 import os
 
-my_client_id = "M8OSffHMbmDPmA"
-my_client_secret = "nLgyFMXQcKQ-09pZABgd_U3bREQ"
-my_user_agent = "Reddit ImageScraping"
-
 image_dir = 'pics'
 image_extentions = ['.jpg','.jpeg','.png']
 
