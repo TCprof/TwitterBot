@@ -4,7 +4,8 @@ import requests
 import urllib
 import os
 
-image_dir = 'pics'
+from settings import config
+
 image_extentions = ['.jpg','.jpeg','.png']
 
 class RedditScraper:
@@ -57,6 +58,6 @@ class RedditScraper:
         print('finished writing data')
 
 if __name__ == "__main__":
-    reddit_bot = RedditScraper(my_client_id,my_client_secret,my_user_agent,['nocontextpics', 'pics'], 3)
+    reddit_bot = RedditScraper(config.client_id,config.client_secret,config.user_agent,['nocontextpics', 'pics'], 3)
     reddit_bot.collect_img()
 

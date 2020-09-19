@@ -2,7 +2,7 @@ import os
 import tweepy
 import configparser
 
-filepath = os.path.filepath(__file__)
+filepath = os.path.abspath(__file__)
 name = os.path.dirname(filepath)
 
 config = configparser.ConfigParser()
@@ -13,13 +13,13 @@ client_secret = reddit_config['client_secret']
 user_agent = reddit_config["client_secret"]
 
 twitter_config = config['Twitter']
-api_key = twitter_config['api key']
+api_key = twitter_config['api_key']
 secret = twitter_config['secret']
-token = twitter_config['token']
 access_token = twitter_config['access_token']
 token_secret = twitter_config['token_secret']
 
 authentication = tweepy.OAuthHandler(api_key,secret)
 authentication.set_access_token(access_token,token_secret)
 api = tweepy.API(authentication)
+
 
