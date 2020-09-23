@@ -10,7 +10,7 @@ config.read(name + '/keys')
 reddit_config = config['Reddit']
 client_id = reddit_config['client_id']
 client_secret = reddit_config['client_secret']
-user_agent = reddit_config["client_secret"]
+user_agent = reddit_config["user_agent"]
 
 twitter_config = config['Twitter']
 api_key = twitter_config['api_key']
