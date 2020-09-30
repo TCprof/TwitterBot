@@ -56,8 +56,10 @@ class RedditScraper:
                 except:
                     print('something went wrong while downloading this', self.image_urls[index])
         print('finished writing data')
+def main():
+    reddit_bot = RedditScraper(config.client_id,config.client_secret,config.user_agent,['nocontextpics', 'pics'], 1)
+    reddit_bot.collect_img()
 
 if __name__ == "__main__":
-    reddit_bot = RedditScraper(config.client_id,config.client_secret,config.user_agent,['nocontextpics', 'pics'], 3)
-    reddit_bot.collect_img()
+    main()
 

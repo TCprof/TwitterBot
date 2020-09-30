@@ -17,16 +17,16 @@ def get_images(image_folder):
 def tweet_image(img_list):
     img = random.choice(img_list)
     try:
-        t = Media.Tweet(img,"test")
+        t = Media.Tweet(img,"")
         t.post(api)
     except tweepy.error.TweepError:
         print("This image could not be read")
     os.remove(img)
 
-
 def main():
     global api
     api = config.api
+    tweet_image(get_images('nocontextpics'))
     tweet_image(get_images('pics'))
 
 if __name__ == "__main__":
